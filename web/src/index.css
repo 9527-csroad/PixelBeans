@@ -1,1 +1,56 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #0D9488;
+  --color-primary-light: #14B8A6;
+  --color-primary-dark: #0F766E;
+  --color-primary-bg: #F0FDFA;
+  --color-accent: #F97316;
+  --color-accent-hover: #EA580C;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F8FAFC;
+  --color-text: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+  --color-border: #E2E8F0;
+  --font-pixel: "Press Start 2P", monospace;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-primary-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* antd theme overrides via CSS */
+.ant-card-head-title {
+  font-weight: 600 !important;
+}
+
+.ant-table-thead > tr > th {
+  background: var(--color-surface-alt) !important;
+}
+
+/* Smooth transitions for interactive elements */
+.ant-btn, .ant-input-number, .ant-select-selector, .ant-slider {
+  transition: all 0.2s ease !important;
+}
+
+/* Custom scrollbar for BOM table */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
