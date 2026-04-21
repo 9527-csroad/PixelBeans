@@ -1,0 +1,51 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Test / coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+coverage/
+
+# Secrets & local env (do not commit)
+.env
+.env.*
+!.env.example
+
+# Node / frontend — large dependency tree & install artifacts (regenerate via npm ci)
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# CLI run artifacts & generated outputs
+result/
+out/
+tmp/
+results/
+
+# Claude Code — machine-specific paths and permissions (skills/agents can stay tracked)
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
