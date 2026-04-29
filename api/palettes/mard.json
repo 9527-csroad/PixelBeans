@@ -1,0 +1,1758 @@
+{
+  "brand": "MARD",
+  "source": "https://www.pixel-beads.com/zh/mard-bead-color-chart",
+  "total": 291,
+  "categories": {
+    "核心标准色": 291,
+    "珍珠质感色": 0,
+    "高亮荧光色": 0
+  },
+  "colors": [
+    {
+      "code": "A1",
+      "name": "A1",
+      "hex": "#FAF4C8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A10",
+      "name": "A10",
+      "hex": "#F77C31",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A11",
+      "name": "A11",
+      "hex": "#FFDD99",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A12",
+      "name": "A12",
+      "hex": "#FE9F72",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A13",
+      "name": "A13",
+      "hex": "#FFC365",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A14",
+      "name": "A14",
+      "hex": "#FD543D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A15",
+      "name": "A15",
+      "hex": "#FFF365",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A16",
+      "name": "A16",
+      "hex": "#FFFF9F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A17",
+      "name": "A17",
+      "hex": "#FFE36E",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A18",
+      "name": "A18",
+      "hex": "#FEBE7D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A19",
+      "name": "A19",
+      "hex": "#FD7C72",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A2",
+      "name": "A2",
+      "hex": "#FFFFD5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A20",
+      "name": "A20",
+      "hex": "#FFD568",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A21",
+      "name": "A21",
+      "hex": "#FFE395",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A22",
+      "name": "A22",
+      "hex": "#F4F57D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A23",
+      "name": "A23",
+      "hex": "#E6C9B7",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A24",
+      "name": "A24",
+      "hex": "#F7F8A2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A25",
+      "name": "A25",
+      "hex": "#FFD67D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A26",
+      "name": "A26",
+      "hex": "#FFC830",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A3",
+      "name": "A3",
+      "hex": "#FEFF8B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A4",
+      "name": "A4",
+      "hex": "#FBED56",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A5",
+      "name": "A5",
+      "hex": "#F4D738",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A6",
+      "name": "A6",
+      "hex": "#FEAC4C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A7",
+      "name": "A7",
+      "hex": "#FE8B4C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A8",
+      "name": "A8",
+      "hex": "#FFDA45",
+      "category": "核心标准色"
+    },
+    {
+      "code": "A9",
+      "name": "A9",
+      "hex": "#FF995B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B1",
+      "name": "B1",
+      "hex": "#E6EE31",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B10",
+      "name": "B10",
+      "hex": "#95D3C2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B11",
+      "name": "B11",
+      "hex": "#5D722A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B12",
+      "name": "B12",
+      "hex": "#166F41",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B13",
+      "name": "B13",
+      "hex": "#CAEB7B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B14",
+      "name": "B14",
+      "hex": "#ADE946",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B15",
+      "name": "B15",
+      "hex": "#2E5132",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B16",
+      "name": "B16",
+      "hex": "#C5ED9C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B17",
+      "name": "B17",
+      "hex": "#9BB13A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B18",
+      "name": "B18",
+      "hex": "#E6EE49",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B19",
+      "name": "B19",
+      "hex": "#24B88C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B2",
+      "name": "B2",
+      "hex": "#63F347",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B20",
+      "name": "B20",
+      "hex": "#C2F0CC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B21",
+      "name": "B21",
+      "hex": "#156A6B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B22",
+      "name": "B22",
+      "hex": "#0B3C43",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B23",
+      "name": "B23",
+      "hex": "#303A21",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B24",
+      "name": "B24",
+      "hex": "#EEFCA5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B25",
+      "name": "B25",
+      "hex": "#4E846D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B26",
+      "name": "B26",
+      "hex": "#8D7A35",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B27",
+      "name": "B27",
+      "hex": "#CCE1AF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B28",
+      "name": "B28",
+      "hex": "#9EE5B9",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B29",
+      "name": "B29",
+      "hex": "#C5E254",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B3",
+      "name": "B3",
+      "hex": "#9EF780",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B30",
+      "name": "B30",
+      "hex": "#E2FCB1",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B31",
+      "name": "B31",
+      "hex": "#B0E792",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B32",
+      "name": "B32",
+      "hex": "#9CAB5A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B4",
+      "name": "B4",
+      "hex": "#5DE035",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B5",
+      "name": "B5",
+      "hex": "#35E352",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B6",
+      "name": "B6",
+      "hex": "#65E2A6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B7",
+      "name": "B7",
+      "hex": "#3DAF80",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B8",
+      "name": "B8",
+      "hex": "#1C9C4F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "B9",
+      "name": "B9",
+      "hex": "#27523A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C1",
+      "name": "C1",
+      "hex": "#E8FFE7",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C10",
+      "name": "C10",
+      "hex": "#3EBCE2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C11",
+      "name": "C11",
+      "hex": "#28DDDE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C12",
+      "name": "C12",
+      "hex": "#1C334D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C13",
+      "name": "C13",
+      "hex": "#CDE8FF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C14",
+      "name": "C14",
+      "hex": "#D5FDFF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C15",
+      "name": "C15",
+      "hex": "#22C4C6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C16",
+      "name": "C16",
+      "hex": "#1557A8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C17",
+      "name": "C17",
+      "hex": "#04D1F6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C18",
+      "name": "C18",
+      "hex": "#1D3344",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C19",
+      "name": "C19",
+      "hex": "#1887A2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C2",
+      "name": "C2",
+      "hex": "#A9F9FC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C20",
+      "name": "C20",
+      "hex": "#176DAF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C21",
+      "name": "C21",
+      "hex": "#BEDDFF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C22",
+      "name": "C22",
+      "hex": "#67B4BE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C23",
+      "name": "C23",
+      "hex": "#C8E2FF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C24",
+      "name": "C24",
+      "hex": "#7CC4FF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C25",
+      "name": "C25",
+      "hex": "#A9E5E5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C26",
+      "name": "C26",
+      "hex": "#3CAED8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C27",
+      "name": "C27",
+      "hex": "#D3DFFA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C28",
+      "name": "C28",
+      "hex": "#BBCFED",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C29",
+      "name": "C29",
+      "hex": "#34488E",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C3",
+      "name": "C3",
+      "hex": "#A0E2FB",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C4",
+      "name": "C4",
+      "hex": "#41CCFF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C5",
+      "name": "C5",
+      "hex": "#01ACEB",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C6",
+      "name": "C6",
+      "hex": "#50AAF0",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C7",
+      "name": "C7",
+      "hex": "#3677D2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C8",
+      "name": "C8",
+      "hex": "#0F54C0",
+      "category": "核心标准色"
+    },
+    {
+      "code": "C9",
+      "name": "C9",
+      "hex": "#324BCA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D1",
+      "name": "D1",
+      "hex": "#AEB4F2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D10",
+      "name": "D10",
+      "hex": "#361851",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D11",
+      "name": "D11",
+      "hex": "#B9BAE1",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D12",
+      "name": "D12",
+      "hex": "#DE9AD4",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D13",
+      "name": "D13",
+      "hex": "#B90095",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D14",
+      "name": "D14",
+      "hex": "#8B279B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D15",
+      "name": "D15",
+      "hex": "#2F1F90",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D16",
+      "name": "D16",
+      "hex": "#E3E1EE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D17",
+      "name": "D17",
+      "hex": "#C4D4F6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D18",
+      "name": "D18",
+      "hex": "#A45EC7",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D19",
+      "name": "D19",
+      "hex": "#D8C3D7",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D2",
+      "name": "D2",
+      "hex": "#858EDD",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D20",
+      "name": "D20",
+      "hex": "#9C32B2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D21",
+      "name": "D21",
+      "hex": "#9A009B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D22",
+      "name": "D22",
+      "hex": "#333A95",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D23",
+      "name": "D23",
+      "hex": "#EBDAFC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D24",
+      "name": "D24",
+      "hex": "#7786E5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D25",
+      "name": "D25",
+      "hex": "#494FC7",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D26",
+      "name": "D26",
+      "hex": "#DFC2F8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D3",
+      "name": "D3",
+      "hex": "#2F54AF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D4",
+      "name": "D4",
+      "hex": "#182A84",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D5",
+      "name": "D5",
+      "hex": "#B843C5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D6",
+      "name": "D6",
+      "hex": "#AC7BDE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D7",
+      "name": "D7",
+      "hex": "#8854B3",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D8",
+      "name": "D8",
+      "hex": "#E2D3FF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "D9",
+      "name": "D9",
+      "hex": "#D5B9F8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E1",
+      "name": "E1",
+      "hex": "#FDD3CC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E10",
+      "name": "E10",
+      "hex": "#D33793",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E11",
+      "name": "E11",
+      "hex": "#FCDDD2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E12",
+      "name": "E12",
+      "hex": "#F78FC3",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E13",
+      "name": "E13",
+      "hex": "#B5006D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E14",
+      "name": "E14",
+      "hex": "#FFD1BA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E15",
+      "name": "E15",
+      "hex": "#F8C7C9",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E16",
+      "name": "E16",
+      "hex": "#FFF3EB",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E17",
+      "name": "E17",
+      "hex": "#FFE2EA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E18",
+      "name": "E18",
+      "hex": "#FFC7DB",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E19",
+      "name": "E19",
+      "hex": "#FEBAD5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E2",
+      "name": "E2",
+      "hex": "#FEC0DF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E20",
+      "name": "E20",
+      "hex": "#D8C7D1",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E21",
+      "name": "E21",
+      "hex": "#BD9DA1",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E22",
+      "name": "E22",
+      "hex": "#B785A1",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E23",
+      "name": "E23",
+      "hex": "#937A8D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E24",
+      "name": "E24",
+      "hex": "#E1BCE8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E3",
+      "name": "E3",
+      "hex": "#FFB7E7",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E4",
+      "name": "E4",
+      "hex": "#E8649E",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E5",
+      "name": "E5",
+      "hex": "#F551A2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E6",
+      "name": "E6",
+      "hex": "#F13D74",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E7",
+      "name": "E7",
+      "hex": "#C63478",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E8",
+      "name": "E8",
+      "hex": "#FFDBE9",
+      "category": "核心标准色"
+    },
+    {
+      "code": "E9",
+      "name": "E9",
+      "hex": "#E970CC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F1",
+      "name": "F1",
+      "hex": "#FD957B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F10",
+      "name": "F10",
+      "hex": "#8A4526",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F11",
+      "name": "F11",
+      "hex": "#5A2121",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F12",
+      "name": "F12",
+      "hex": "#FD4E6A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F13",
+      "name": "F13",
+      "hex": "#F35744",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F14",
+      "name": "F14",
+      "hex": "#FFA9AD",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F15",
+      "name": "F15",
+      "hex": "#D30022",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F16",
+      "name": "F16",
+      "hex": "#FEC2A6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F17",
+      "name": "F17",
+      "hex": "#E69C79",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F18",
+      "name": "F18",
+      "hex": "#D37C46",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F19",
+      "name": "F19",
+      "hex": "#C1444A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F2",
+      "name": "F2",
+      "hex": "#FC3D46",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F20",
+      "name": "F20",
+      "hex": "#CD9391",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F21",
+      "name": "F21",
+      "hex": "#F7B4C6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F22",
+      "name": "F22",
+      "hex": "#FDC0D0",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F23",
+      "name": "F23",
+      "hex": "#F67E66",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F24",
+      "name": "F24",
+      "hex": "#E698AA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F25",
+      "name": "F25",
+      "hex": "#E54B4F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F3",
+      "name": "F3",
+      "hex": "#F74941",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F4",
+      "name": "F4",
+      "hex": "#FC283C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F5",
+      "name": "F5",
+      "hex": "#E7002F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F6",
+      "name": "F6",
+      "hex": "#943630",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F7",
+      "name": "F7",
+      "hex": "#971937",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F8",
+      "name": "F8",
+      "hex": "#BC0028",
+      "category": "核心标准色"
+    },
+    {
+      "code": "F9",
+      "name": "F9",
+      "hex": "#E2677A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G1",
+      "name": "G1",
+      "hex": "#FFE2CE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G10",
+      "name": "G10",
+      "hex": "#D98C39",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G11",
+      "name": "G11",
+      "hex": "#E0C593",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G12",
+      "name": "G12",
+      "hex": "#FFC890",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G13",
+      "name": "G13",
+      "hex": "#B7714A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G14",
+      "name": "G14",
+      "hex": "#8D614C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G15",
+      "name": "G15",
+      "hex": "#FCF9E0",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G16",
+      "name": "G16",
+      "hex": "#F2D9BA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G17",
+      "name": "G17",
+      "hex": "#78524B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G18",
+      "name": "G18",
+      "hex": "#FFE4CC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G19",
+      "name": "G19",
+      "hex": "#E07935",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G2",
+      "name": "G2",
+      "hex": "#FFC4AA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G20",
+      "name": "G20",
+      "hex": "#A94023",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G21",
+      "name": "G21",
+      "hex": "#B88558",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G3",
+      "name": "G3",
+      "hex": "#F4C3A5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G4",
+      "name": "G4",
+      "hex": "#E1B383",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G5",
+      "name": "G5",
+      "hex": "#EDB045",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G6",
+      "name": "G6",
+      "hex": "#E99C17",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G7",
+      "name": "G7",
+      "hex": "#9D5B3E",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G8",
+      "name": "G8",
+      "hex": "#753832",
+      "category": "核心标准色"
+    },
+    {
+      "code": "G9",
+      "name": "G9",
+      "hex": "#E6B483",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H1",
+      "name": "H1",
+      "hex": "#FDFBFF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H10",
+      "name": "H10",
+      "hex": "#EEE9EA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H11",
+      "name": "H11",
+      "hex": "#CECDD5",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H12",
+      "name": "H12",
+      "hex": "#FFF5ED",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H13",
+      "name": "H13",
+      "hex": "#F5ECD2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H14",
+      "name": "H14",
+      "hex": "#CFD7D3",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H15",
+      "name": "H15",
+      "hex": "#98A6A8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H16",
+      "name": "H16",
+      "hex": "#1D1414",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H17",
+      "name": "H17",
+      "hex": "#F1EDED",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H18",
+      "name": "H18",
+      "hex": "#FFFDF0",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H19",
+      "name": "H19",
+      "hex": "#F6EFE2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H2",
+      "name": "H2",
+      "hex": "#FEFFFF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H20",
+      "name": "H20",
+      "hex": "#949FA3",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H21",
+      "name": "H21",
+      "hex": "#FFFBE1",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H22",
+      "name": "H22",
+      "hex": "#CACAD4",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H23",
+      "name": "H23",
+      "hex": "#9A9D94",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H3",
+      "name": "H3",
+      "hex": "#B6B1BA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H4",
+      "name": "H4",
+      "hex": "#89858C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H5",
+      "name": "H5",
+      "hex": "#48464E",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H6",
+      "name": "H6",
+      "hex": "#2F2B2F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H7",
+      "name": "H7",
+      "hex": "#000000",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H8",
+      "name": "H8",
+      "hex": "#E7D6DB",
+      "category": "核心标准色"
+    },
+    {
+      "code": "H9",
+      "name": "H9",
+      "hex": "#EDEDED",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M1",
+      "name": "M1",
+      "hex": "#BCC6B8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M10",
+      "name": "M10",
+      "hex": "#C5B2BC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M11",
+      "name": "M11",
+      "hex": "#9F7594",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M12",
+      "name": "M12",
+      "hex": "#644749",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M13",
+      "name": "M13",
+      "hex": "#D19066",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M14",
+      "name": "M14",
+      "hex": "#C77362",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M15",
+      "name": "M15",
+      "hex": "#757D78",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M2",
+      "name": "M2",
+      "hex": "#8AA386",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M3",
+      "name": "M3",
+      "hex": "#697D80",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M4",
+      "name": "M4",
+      "hex": "#E3D2BC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M5",
+      "name": "M5",
+      "hex": "#D0CCAA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M6",
+      "name": "M6",
+      "hex": "#B0A782",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M7",
+      "name": "M7",
+      "hex": "#B4A497",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M8",
+      "name": "M8",
+      "hex": "#B38281",
+      "category": "核心标准色"
+    },
+    {
+      "code": "M9",
+      "name": "M9",
+      "hex": "#A58767",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P1",
+      "name": "P1",
+      "hex": "#FCF7F8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P10",
+      "name": "P10",
+      "hex": "#D9C7EA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P11",
+      "name": "P11",
+      "hex": "#F3ECC9",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P12",
+      "name": "P12",
+      "hex": "#E6EEF2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P13",
+      "name": "P13",
+      "hex": "#AACBEF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P14",
+      "name": "P14",
+      "hex": "#337680",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P15",
+      "name": "P15",
+      "hex": "#668575",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P16",
+      "name": "P16",
+      "hex": "#FEBF45",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P17",
+      "name": "P17",
+      "hex": "#FEA324",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P18",
+      "name": "P18",
+      "hex": "#FEB89F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P19",
+      "name": "P19",
+      "hex": "#FFFEEC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P2",
+      "name": "P2",
+      "hex": "#B0A9AC",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P20",
+      "name": "P20",
+      "hex": "#FEBECF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P21",
+      "name": "P21",
+      "hex": "#ECBEBF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P22",
+      "name": "P22",
+      "hex": "#E4A89F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P23",
+      "name": "P23",
+      "hex": "#A56268",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P3",
+      "name": "P3",
+      "hex": "#AFDCAB",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P4",
+      "name": "P4",
+      "hex": "#FEA49F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P5",
+      "name": "P5",
+      "hex": "#EE8C3E",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P6",
+      "name": "P6",
+      "hex": "#5FD0A7",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P7",
+      "name": "P7",
+      "hex": "#EB9270",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P8",
+      "name": "P8",
+      "hex": "#F0D958",
+      "category": "核心标准色"
+    },
+    {
+      "code": "P9",
+      "name": "P9",
+      "hex": "#D9D9D9",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Q1",
+      "name": "Q1",
+      "hex": "#F2A5E8",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Q2",
+      "name": "Q2",
+      "hex": "#E9EC91",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Q3",
+      "name": "Q3",
+      "hex": "#FFFF00",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Q4",
+      "name": "Q4",
+      "hex": "#FFEBFA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Q5",
+      "name": "Q5",
+      "hex": "#76CEDE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R1",
+      "name": "R1",
+      "hex": "#D50D21",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R10",
+      "name": "R10",
+      "hex": "#FFDB4C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R11",
+      "name": "R11",
+      "hex": "#FFEBFA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R12",
+      "name": "R12",
+      "hex": "#D8D5CE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R13",
+      "name": "R13",
+      "hex": "#55514C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R14",
+      "name": "R14",
+      "hex": "#9FE4DF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R15",
+      "name": "R15",
+      "hex": "#77CEE9",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R16",
+      "name": "R16",
+      "hex": "#3ECFCA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R17",
+      "name": "R17",
+      "hex": "#4A867A",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R18",
+      "name": "R18",
+      "hex": "#7FCD9D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R19",
+      "name": "R19",
+      "hex": "#CDE55D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R2",
+      "name": "R2",
+      "hex": "#F92F83",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R20",
+      "name": "R20",
+      "hex": "#E8C7B4",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R21",
+      "name": "R21",
+      "hex": "#AD6F3C",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R22",
+      "name": "R22",
+      "hex": "#6C372F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R23",
+      "name": "R23",
+      "hex": "#FEB872",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R24",
+      "name": "R24",
+      "hex": "#F3C1C0",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R25",
+      "name": "R25",
+      "hex": "#C9675E",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R26",
+      "name": "R26",
+      "hex": "#D293BE",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R27",
+      "name": "R27",
+      "hex": "#EA8CB1",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R28",
+      "name": "R28",
+      "hex": "#9C87D6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R3",
+      "name": "R3",
+      "hex": "#FD8324",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R4",
+      "name": "R4",
+      "hex": "#F8EC31",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R5",
+      "name": "R5",
+      "hex": "#35C75B",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R6",
+      "name": "R6",
+      "hex": "#238891",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R7",
+      "name": "R7",
+      "hex": "#19779D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R8",
+      "name": "R8",
+      "hex": "#1A60C3",
+      "category": "核心标准色"
+    },
+    {
+      "code": "R9",
+      "name": "R9",
+      "hex": "#9A56B4",
+      "category": "核心标准色"
+    },
+    {
+      "code": "T1",
+      "name": "T1",
+      "hex": "#FFFFFF",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Y1",
+      "name": "Y1",
+      "hex": "#FD6FB4",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Y2",
+      "name": "Y2",
+      "hex": "#FEB481",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Y3",
+      "name": "Y3",
+      "hex": "#D7FAA0",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Y4",
+      "name": "Y4",
+      "hex": "#8BDBFA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "Y5",
+      "name": "Y5",
+      "hex": "#E987EA",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG1",
+      "name": "ZG1",
+      "hex": "#DAABB3",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG2",
+      "name": "ZG2",
+      "hex": "#D6AA87",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG3",
+      "name": "ZG3",
+      "hex": "#C1BD8D",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG4",
+      "name": "ZG4",
+      "hex": "#96869F",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG5",
+      "name": "ZG5",
+      "hex": "#8490A6",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG6",
+      "name": "ZG6",
+      "hex": "#94BFE2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG7",
+      "name": "ZG7",
+      "hex": "#E2A9D2",
+      "category": "核心标准色"
+    },
+    {
+      "code": "ZG8",
+      "name": "ZG8",
+      "hex": "#AB91C0",
+      "category": "核心标准色"
+    }
+  ]
+}

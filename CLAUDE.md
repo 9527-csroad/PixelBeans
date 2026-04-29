@@ -5,15 +5,21 @@ PixelBeans — 将照片转化为专业拼豆（Perler/Hama）图纸的工具。
 最终形态是提供给 App 开发者调用的算法能力（后端 HTTP API / 端侧算法包）。
 当前以 Web 验证界面作为算法效果的试验场。
 
+## Python 环境
+- **解释器**：Python 3.12.0
+- **环境路径**：Conda env `image` → `D:\Anaconda3\envs\image\python`
+- **激活方式**：`conda activate image`
+- **核心依赖版本**：numpy 2.4.3, Pillow 10.0.1, opencv-python 4.8.1, opencv-contrib-python 4.13.0, fastapi 0.128.0, uvicorn 0.40.0, pydantic 2.12.5, python-multipart 0.0.21, pytest 9.0.3
+
 ## 协作语言
 - 所有回复使用中文
 - 代码注释使用英文（遵循行业惯例）
 - 变量/函数/文件命名使用英文
 
 ## 技术栈
-- **核心算法**：Python 3.10+（纯 Python，numpy + Pillow + opencv）
+- **核心算法**：Python 3.12（纯 Python，numpy + Pillow + opencv）
 - **API 层**：FastAPI + Pydantic + uvicorn
-- **前端**：React 18 + Vite + Canvas + Tailwind CSS
+- **前端**：React 18 + Vite + SVG + Tailwind CSS + Ant Design 5.x
 - **PDF 导出**：ReportLab
 - **测试**：pytest
 - **Lint**：ruff
@@ -25,21 +31,46 @@ PixelBeans — 将照片转化为专业拼豆（Perler/Hama）图纸的工具。
 - 不在代码中写多余注释，除非 WHY 非显而易见
 - 涉及破坏性操作（删除文件/分支、force push 等）需先确认
 - 不提交包含密钥的文件
+- `results/` 目录为 CLI 输出产物，不提交
 
 ## 项目结构
 ```
 PixelBeans/
-├── pixelbeans/          ← 算法核心包（M1 已完成）
-├── palettes/            ← 色卡数据（mard.json 已就绪）
-├── server/              ← FastAPI 层（M2）
-├── web/                 ← React 前端（M2）
+├── pixelbeans/          ← 算法核心包（M1 已完成，可 pip install -e .）
+├── palettes/            ← 色卡数据（mard.json 已就绪，291 色）
+├── server/              ← FastAPI 本地开发层（M2，端口 8003）
+├── web/                 ← React + Vite + Ant Design 前端（M2，端口 5173）
+├── api/                 ← 线上部署层（server/ 的线上版本，base64 传图）
 ├── tests/               ← 单元测试
-├── docs/                ← plan.md 实施方案
-├── images/              ← 样例图
-└── results/             ← 输出产物
+├── docs/                ← plan.md 实施方案 + m2_prd.md
+├── images/              ← 样例图（anime.jpg, cartoon.jpg, claude-code.png, cloud1.png）
+├── results/             ← CLI 输出产物（不提交）
+├── cli.py               ← 命令行入口（python cli.py --input xxx --size 58x58 --out result/）
+├── pyproject.toml       ← 项目配置
+└── requirements.txt     ← 运行时依赖
+```
+
+## 开发命令
+```bash
+# 算法 CLI
+conda activate image
+python cli.py --input images/anime.jpg --size 58x58 --out results/anime
+
+# 后端 API（本地开发）
+conda activate image
+uvicorn server.main:app --host 0.0.0.0 --port 8003
+
+# 前端（本地开发）
+cd web && npm run dev
+
+# 测试
+pytest
+
+# Lint
+ruff check .
 ```
 
 ## 里程碑
-- **M1**（已完成）：算法骨架 + CLI
-- **M2**（进行中）：FastAPI + React Web 演示
-- **M3**（规划中）：手动修图、分板拆图、PDF 打印等
+- **M1**（已完成）：算法骨架 + CLI + MARD 色卡 + 单元测试
+- **M2**（进行中）：FastAPI 本地 API + React Web 演示 + SVG 图纸渲染
+- **M3**（规划中）：手动修图、分板拆图、PDF 打印、中艺/漫奇色卡
