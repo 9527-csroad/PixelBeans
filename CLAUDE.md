@@ -58,10 +58,10 @@ python cli.py --input images/anime.jpg --size 58x58 --out results/anime
 
 # 后端 API（本地开发）
 conda activate image
-uvicorn server.main:app --host 0.0.0.0 --port 8003
+uvicorn server.main:app --host 0.0.0.0 --port 8000
 
 # 前端（本地开发）
-cd web && npm run dev
+cd web && npm run dev -- --host
 
 # 测试
 pytest
@@ -69,6 +69,28 @@ pytest
 # Lint
 ruff check .
 ```
+
+## 开发工作流
+
+```
+本地 Demo (server/ + web/)
+    ↓ 算法验证通过后，同步算法逻辑
+API 层 (api/) — 线上部署版本，base64 传图 + Nacos 服务发现
+    ↓ 代码推送 + 部署
+线上服务 (jszx-pixcelbeans-apiserver)
+```
+
+- `server/` 是本地开发层，使用 multipart/form-data 传图，便于快速调试
+- `api/` 是线上部署层，使用 JSON `img_url` 传图，对接 Nacos 服务发现和文件网关
+- 开发节奏：先在 `server/` + `web/` 完成功能验证 → 将算法改动同步到 `api/` → 部署到线上
+- 对比差异时：`api/` vs `jszx-pixcelbeans-apiserver/`（线上实际运行代码）
+
+## 已知问题
+- **preview / pattern 图像重复**：线上 `/generate_pattern` 返回的 `preview` 和 `pattern` 两张图视觉上完全一致。根因：`_render_pattern()` 与 `render_preview(mode="square")` 逻辑重复，均为实心色块网格，仅 cell_size 和 1px 间隙不同，正常观看尺寸下无法区分。待确认修复方案后处理。
+
+## 常见问题排查
+- 详细规则和已记录的故障解决方案见 [`.claude/rules/`](.claude/rules/) 目录
+- 当前收录：[Vite Windows IPv6 绑定问题](.claude/rules/vite-ipv6-windows.md)
 
 ## 里程碑
 - **M1**（已完成）：算法骨架 + CLI + MARD 色卡 + 单元测试

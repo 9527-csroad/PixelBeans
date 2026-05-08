@@ -1,4 +1,4 @@
-"""Export artifacts from a PatternResult: JSON, preview PNG, grid PNG, BOM text.
+"""Export artifacts from a PatternResult: JSON, preview PNG, chart PNG, grid PNG, BOM text.
 
 All rendering uses Pillow only (no external font files shipped; we try common
 system fonts and fall back to the default bitmap if none are available).
@@ -6,6 +6,7 @@ system fonts and fall back to the default bitmap if none are available).
 Outputs (plan §3.5):
 - pattern.json  structured data; the backbone of the API response
 - preview.png   flat pixel-art image for quick visual comparison with original
+- chart.png     color-code chart with row/col labels + crosshairs (primary craft reference)
 - grid.png      chart with colored cells + symbols + reference crosshairs
 - bom.txt       human-readable BOM
 - bom.csv       machine-readable BOM
@@ -150,6 +151,85 @@ def render_preview(
     return img
 
 
+def render_chart(
+    result: PatternResult,
+    *,
+    cell_size: int = 20,
+    minor_line: tuple[int, int, int] = (200, 200, 200),
+    major_line: tuple[int, int, int] = (0, 0, 0),
+    major_every: int = 10,
+    label_every: int = 5,
+) -> Image.Image:
+    """Paper chart with color codes, row/col labels, and crosshairs.
+
+    Unlike render_grid (which uses abstract symbols), this shows the
+    palette code (e.g. "M01") inside each cell for direct bead lookup.
+    """
+    W, H = result.width, result.height
+    # Left margin for row numbers, top margin for column numbers
+    margin = max(30, cell_size * 2)
+    img_w = W * cell_size + margin
+    img_h = H * cell_size + margin
+    img = Image.new("RGB", (img_w, img_h), (255, 255, 255))
+    draw = ImageDraw.Draw(img)
+
+    code_font = _load_font(max(7, cell_size // 2))
+    label_font = _load_font(max(8, cell_size // 2))
+
+    # Column labels (every `label_every`)
+    for x in range(0, W, label_every):
+        cx = margin + x * cell_size + cell_size // 2
+        draw.text((cx - 4, 4), str(x + 1), fill=(100, 100, 100), font=label_font)
+
+    # Row labels + cells
+    for y, row in enumerate(result.cells):
+        # Row number label
+        if y % label_every == 0:
+            ry = margin + y * cell_size + cell_size // 2
+            _, th = _text_size(draw, str(y + 1), label_font)
+            draw.text((4, ry - th // 2), str(y + 1), fill=(100, 100, 100), font=label_font)
+
+        for x, cell in enumerate(row):
+            x0 = margin + x * cell_size
+            y0 = margin + y * cell_size
+            x1 = x0 + cell_size
+            y1 = y0 + cell_size
+
+            if cell.is_empty:
+                draw.rectangle([x0, y0, x1 - 1, y1 - 1], fill=(245, 245, 245))
+                draw.line([x0, y0, x1 - 1, y1 - 1], fill=(210, 210, 210))
+                continue
+
+            rgb = _hex_to_rgb(cell.hex)
+            draw.rectangle([x0, y0, x1 - 1, y1 - 1], fill=rgb)
+
+            # Draw color code in center
+            if cell.code and cell.code != "_EMPTY_":
+                txt_color = _contrast_color(rgb)
+                tw, th = _text_size(draw, cell.code, code_font)
+                tx = x0 + (cell_size - tw) // 2
+                ty = y0 + (cell_size - th) // 2
+                draw.text((tx, ty), cell.code, fill=txt_color, font=code_font)
+
+    # Grid lines
+    for x in range(W + 1):
+        xp = margin + x * cell_size
+        draw.line([(xp, margin), (xp, img_h - 1)], fill=minor_line, width=1)
+    for y in range(H + 1):
+        yp = margin + y * cell_size
+        draw.line([(margin, yp), (img_w - 1, yp)], fill=minor_line, width=1)
+
+    # Major crosshairs (drawn on top)
+    for x in range(0, W + 1, major_every):
+        xp = margin + x * cell_size
+        draw.line([(xp, margin), (xp, img_h - 1)], fill=major_line, width=2)
+    for y in range(0, H + 1, major_every):
+        yp = margin + y * cell_size
+        draw.line([(margin, yp), (img_w - 1, yp)], fill=major_line, width=2)
+
+    return img
+
+
 def render_grid(
     result: PatternResult,
     *,
@@ -205,6 +285,10 @@ def write_preview(result: PatternResult, path: PathLike, **kw) -> None:
     render_preview(result, **kw).save(path)
 
 
+def write_chart(result: PatternResult, path: PathLike, **kw) -> None:
+    render_chart(result, **kw).save(path)
+
+
 def write_grid(result: PatternResult, path: PathLike, **kw) -> None:
     render_grid(result, **kw).save(path)
 
@@ -243,6 +327,7 @@ def write_all(
     out_dir: PathLike,
     *,
     preview_cell_size: int = 8,
+    chart_cell_size: int = 20,
     grid_cell_size: int = 24,
     preview_mode: str = "square",
 ) -> dict[str, Path]:
@@ -252,12 +337,14 @@ def write_all(
     paths = {
         "pattern_json": out / "pattern.json",
         "preview_png": out / "preview.png",
+        "chart_png": out / "chart.png",
         "grid_png": out / "grid.png",
         "bom_txt": out / "bom.txt",
         "bom_csv": out / "bom.csv",
     }
     write_json(result, paths["pattern_json"])
     write_preview(result, paths["preview_png"], cell_size=preview_cell_size, mode=preview_mode)
+    write_chart(result, paths["chart_png"], cell_size=chart_cell_size)
     write_grid(result, paths["grid_png"], cell_size=grid_cell_size)
     write_bom_text(result, paths["bom_txt"])
     write_bom_csv(result, paths["bom_csv"])

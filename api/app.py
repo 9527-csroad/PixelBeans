@@ -23,7 +23,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 
 from pixelbeans import PipelineConfig, run
-from pixelbeans.export import render_grid, render_preview
+from pixelbeans.export import render_chart, render_grid, render_preview
 from pixelbeans.palette import load_palette as load_palette_core
 
 from schemas import (
@@ -64,29 +64,6 @@ def _img_to_b64(img: Image.Image) -> str:
     return base64.b64encode(buf.getvalue()).decode("ascii")
 
 
-def _render_pattern(result, cell_size: int = 16) -> Image.Image:
-    """Flat color grid — no symbols, no text, just colored cells.
-
-    This is the 3rd output image alongside preview and grid.
-    """
-    W, H = result.width, result.height
-    img = Image.new("RGB", (W * cell_size, H * cell_size), (255, 255, 255))
-    draw = img.load()
-    for y in range(H):
-        for x in range(W):
-            cell = result.cells[y][x]
-            if cell.is_empty:
-                continue
-            h = cell.hex.lstrip("#")
-            if len(h) == 8:
-                h = h[:6]
-            rgb = (int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
-            for dy in range(cell_size):
-                for dx in range(cell_size):
-                    draw[x * cell_size + dx, y * cell_size + dy] = rgb
-    return img
-
-
 # ── Endpoints ───────────────────────────────────────────────────────────────
 
 @app.post("/api/v1/pattern", response_model=PatternResponse)
@@ -114,7 +91,7 @@ def generate_pattern(req: PatternRequest):
         stats         — {total_beads, unique_colors, empty_cells}
         preview_image — base64 PNG: pixel art preview
         grid_image    — base64 PNG: symbol grid with crosshairs
-        pattern_image — base64 PNG: flat color grid (no symbols)
+        pattern_image — base64 PNG: color-code chart with row/col labels
     """
     palette_path = PALETTES_DIR / f"{req.palette.lower()}.json"
     if not palette_path.exists():
@@ -146,7 +123,7 @@ def generate_pattern(req: PatternRequest):
     # Render 3 images
     preview_img = render_preview(result, cell_size=8, mode="square")
     grid_img = render_grid(result, cell_size=24)
-    pattern_img = _render_pattern(result, cell_size=16)
+    pattern_img = render_chart(result, cell_size=20)
 
     # Build response
     pattern_2d = [

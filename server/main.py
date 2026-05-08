@@ -109,6 +109,7 @@ def generate_pattern(
         raise HTTPException(status_code=500, detail=f"Export failed: {e}")
 
     preview_b64 = _png_to_b64(out_dir / "preview.png")
+    chart_b64 = _png_to_b64(out_dir / "chart.png")
     grid_b64 = _png_to_b64(out_dir / "grid.png")
 
     pattern_2d = []
@@ -134,6 +135,7 @@ def generate_pattern(
             empty_cells=result.stats.empty_cells,
         ),
         preview_png=preview_b64,
+        chart_png=chart_b64,
         grid_png=grid_b64,
     )
 

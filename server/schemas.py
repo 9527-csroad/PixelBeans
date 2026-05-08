@@ -43,6 +43,7 @@ class PatternResponse(BaseModel):
     palette_used: list[PaletteUsedEntry]
     stats: PatternStats
     preview_png: str = Field(description="base64-encoded PNG")
+    chart_png: str = Field(description="base64-encoded PNG")
     grid_png: str = Field(description="base64-encoded PNG")
 
 
