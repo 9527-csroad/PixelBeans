@@ -45,13 +45,20 @@ def build_parser() -> argparse.ArgumentParser:
         description="Convert a photo into a bead pattern chart.",
     )
     p.add_argument("--input", "-i", required=True, type=Path, help="Input image file")
-    p.add_argument("--size", "-s", required=True, type=_parse_size,
-                   help="Output grid size, e.g. 58x58")
+    p.add_argument("--size", "-s", type=_parse_size, default=None,
+                   help="Output grid size, e.g. 58x58 (required unless --preserve-aspect-ratio)")
     p.add_argument("--palette", "-p", default="mard",
                    help="Palette brand (default: mard)")
     p.add_argument("--out", "-o", required=True, type=Path, help="Output directory")
     p.add_argument("--max-colors", type=int, default=None,
                    help="Upper bound on distinct colors in output (default: unlimited)")
+
+    g_mode = p.add_argument_group("aspect ratio mode")
+    g_mode.add_argument("--preserve-aspect-ratio", action="store_true",
+                        help="Keep original image aspect ratio; --size is ignored for the "
+                             "short edge, --max-dimension controls the long edge")
+    g_mode.add_argument("--max-dimension", type=int, default=58,
+                        help="Longest edge in beads when --preserve-aspect-ratio is set (default: 58)")
 
     g_pre = p.add_argument_group("preprocessing")
     g_pre.add_argument("--brightness", type=float, default=1.0)
@@ -81,7 +88,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: input file not found: {args.input}", file=sys.stderr)
         return 2
 
-    w, h = args.size
+    if not args.preserve_aspect_ratio and args.size is None:
+        print("error: --size is required unless --preserve-aspect-ratio is set", file=sys.stderr)
+        return 2
+
+    w, h = args.size if args.size is not None else (58, 58)
     config = PipelineConfig(
         target_width=w,
         target_height=h,
@@ -91,9 +102,11 @@ def main(argv: list[str] | None = None) -> int:
         sharpen=args.sharpen,
         alpha_threshold=args.alpha_threshold,
         max_colors=args.max_colors,
-        dither=False,  # M1 does not implement dithering
+        dither=False,
         remove_isolated_beads=not args.no_cleanup,
         min_region_size=args.min_region_size,
+        preserve_aspect_ratio=args.preserve_aspect_ratio,
+        max_dimension=args.max_dimension,
     )
 
     try:
@@ -120,7 +133,8 @@ def main(argv: list[str] | None = None) -> int:
     )
     print(f"  brand : {result.palette_meta.brand}  ({len(palette)} available)")
     print(f"  size  : {result.width} × {result.height}  "
-          f"(empty: {result.stats.empty_cells})")
+          f"(empty: {result.stats.empty_cells})"
+          f"{' [aspect-ratio preserved]' if args.preserve_aspect_ratio else ''}")
     for name, path in paths.items():
         print(f"  {name:14s} {path}")
     return 0

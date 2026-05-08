@@ -53,6 +53,8 @@ class PipelineConfig:
     saturation: float = 1.0
     sharpen: bool = False
     alpha_threshold: int = 128
+    preserve_aspect_ratio: bool = False
+    max_dimension: int = 58
 
     # quantization
     max_colors: Optional[int] = None

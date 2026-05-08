@@ -26,6 +26,8 @@ class PatternRequest(BaseModel):
     sharpen: bool = False
     remove_isolated: bool = True
     min_region_size: int = Field(default=2, ge=1, le=10)
+    preserve_aspect_ratio: bool = False
+    max_dimension: int = Field(default=58, ge=10, le=200)
 
 
 # ── Response ───────────────────────────────────────────────────────────────

@@ -69,6 +69,8 @@ def generate_pattern(
     sharpen: bool = Form(False),
     remove_isolated: bool = Form(True),
     min_region_size: int = Form(2),
+    preserve_aspect_ratio: bool = Form(False),
+    max_dimension: int = Form(58),
 ):
     palette_lower = palette.lower()
     palette_path = PALETTES_DIR / f"{palette_lower}.json"
@@ -93,6 +95,8 @@ def generate_pattern(
         max_colors=max_colors,
         remove_isolated_beads=remove_isolated,
         min_region_size=min_region_size,
+        preserve_aspect_ratio=preserve_aspect_ratio,
+        max_dimension=max_dimension,
     )
 
     try:
@@ -126,7 +130,7 @@ def generate_pattern(
     ]
 
     return PatternResponse(
-        size=SizeResponse(width=width, height=height),
+        size=SizeResponse(width=result.width, height=result.height),
         pattern=pattern_2d,
         palette_used=palette_used,
         stats=PatternStats(

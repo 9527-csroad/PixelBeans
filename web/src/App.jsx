@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { ConfigProvider, Upload, Slider, InputNumber, Select, Button, Table, Tabs, message, Spin, Card, Row, Col, Space, Divider, Switch, Tag, Collapse } from 'antd'
+import { ConfigProvider, Upload, Slider, InputNumber, Select, Button, Table, Tabs, message, Spin, Card, Row, Col, Space, Divider, Switch, Tag, Collapse, Radio } from 'antd'
 import { InboxOutlined, CloudUploadOutlined, SettingOutlined, PictureOutlined, AppstoreOutlined, FileTextOutlined, DownloadOutlined } from '@ant-design/icons'
 import axios from 'axios'
 import PatternCanvas from './components/PatternCanvas'
@@ -52,6 +52,9 @@ function App() {
   // Params
   const [width, setWidth] = useState(58)
   const [height, setHeight] = useState(58)
+  const [aspectMode, setAspectMode] = useState('center-crop') // 'center-crop' | 'preserve-ratio'
+  const [maxDimension, setMaxDimension] = useState(58)
+  const [fileDimensions, setFileDimensions] = useState(null) // { width, height } of uploaded image
   const [palette, setPalette] = useState('mard')
   const [maxColors, setMaxColors] = useState(null)
   const [brightness, setBrightness] = useState(1.0)
@@ -75,8 +78,15 @@ function App() {
     try {
       const formData = new FormData()
       formData.append('image', file)
-      formData.append('width', width)
-      formData.append('height', height)
+      if (aspectMode === 'preserve-ratio') {
+        formData.append('preserve_aspect_ratio', true)
+        formData.append('max_dimension', maxDimension)
+        formData.append('width', 58) // placeholder, server will override
+        formData.append('height', 58)
+      } else {
+        formData.append('width', width)
+        formData.append('height', height)
+      }
       formData.append('palette', palette)
       if (maxColors) formData.append('max_colors', maxColors)
       formData.append('brightness', brightness)
@@ -95,12 +105,19 @@ function App() {
     } finally {
       setLoading(false)
     }
-  }, [file, width, height, palette, maxColors, brightness, contrast, saturation, removeIsolated])
+  }, [file, aspectMode, maxDimension, width, height, palette, maxColors, brightness, contrast, saturation, removeIsolated])
 
   const beforeUpload = (f) => {
     setFile(f)
     setFilePreview(URL.createObjectURL(f))
     setResult(null)
+    // Read image dimensions
+    const img = new Image()
+    img.onload = () => {
+      setFileDimensions({ width: img.width, height: img.height })
+      URL.revokeObjectURL(img.src)
+    }
+    img.src = URL.createObjectURL(f)
     return false
   }
 
@@ -108,8 +125,11 @@ function App() {
     setFile(null)
     setFilePreview(null)
     setResult(null)
+    setFileDimensions(null)
     setWidth(58)
     setHeight(58)
+    setAspectMode('center-crop')
+    setMaxDimension(58)
     setBrightness(1.0)
     setContrast(1.0)
     setSaturation(1.0)
@@ -254,31 +274,72 @@ function App() {
                       />
                     </div>
 
-                    {/* Grid Size */}
+                    {/* Aspect Mode Switch */}
                     <div>
-                      <label className="text-xs font-medium text-gray-500 uppercase tracking-wide">网格尺寸</label>
-                      <div className="flex items-center gap-2 mt-1">
-                        <InputNumber
-                          value={width}
-                          onChange={(v) => setWidth(v)}
-                          min={10}
-                          max={200}
-                          className="flex-1"
-                          size="middle"
-                          addonBefore="宽"
-                        />
-                        <span className="text-gray-400">×</span>
-                        <InputNumber
-                          value={height}
-                          onChange={(v) => setHeight(v)}
-                          min={10}
-                          max={200}
-                          className="flex-1"
-                          size="middle"
-                          addonBefore="高"
-                        />
-                      </div>
+                      <label className="text-xs font-medium text-gray-500 uppercase tracking-wide">裁剪模式</label>
+                      <Radio.Group
+                        value={aspectMode}
+                        onChange={(e) => setAspectMode(e.target.value)}
+                        className="w-full mt-1"
+                        buttonStyle="solid"
+                        size="middle"
+                      >
+                        <Radio.Button value="center-crop" className="flex-1 text-center">中心裁剪</Radio.Button>
+                        <Radio.Button value="preserve-ratio" className="flex-1 text-center">保持原比例</Radio.Button>
+                      </Radio.Group>
                     </div>
+
+                    {/* Grid Size - changes based on mode */}
+                    {aspectMode === 'center-crop' ? (
+                      <div>
+                        <label className="text-xs font-medium text-gray-500 uppercase tracking-wide">网格尺寸</label>
+                        <div className="flex items-center gap-2 mt-1">
+                          <InputNumber
+                            value={width}
+                            onChange={(v) => setWidth(v)}
+                            min={10}
+                            max={200}
+                            className="flex-1"
+                            size="middle"
+                            addonBefore="宽"
+                          />
+                          <span className="text-gray-400">×</span>
+                          <InputNumber
+                            value={height}
+                            onChange={(v) => setHeight(v)}
+                            min={10}
+                            max={200}
+                            className="flex-1"
+                            size="middle"
+                            addonBefore="高"
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <div>
+                        <label className="text-xs font-medium text-gray-500 uppercase tracking-wide">最长边</label>
+                        <div className="flex items-center gap-2 mt-1">
+                          <InputNumber
+                            value={maxDimension}
+                            onChange={(v) => setMaxDimension(v)}
+                            min={10}
+                            max={200}
+                            className="flex-1"
+                            size="middle"
+                            addonBefore="格"
+                          />
+                        </div>
+                        {fileDimensions && (
+                          <div className="mt-1 text-xs text-gray-400">
+                            原图 {fileDimensions.width}×{fileDimensions.height} → 将输出 {
+                              fileDimensions.width >= fileDimensions.height
+                                ? `${maxDimension}×${Math.max(1, Math.round(maxDimension * fileDimensions.height / fileDimensions.width))}`
+                                : `${Math.max(1, Math.round(maxDimension * fileDimensions.width / fileDimensions.height))}×${maxDimension}`
+                            }
+                          </div>
+                        )}
+                      </div>
+                    )}
 
                     {/* Max Colors */}
                     <div>

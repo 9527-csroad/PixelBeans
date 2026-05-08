@@ -16,6 +16,7 @@ lives in `postprocess.py` and runs on `idx_grid` between quantize and assembly.
 
 from __future__ import annotations
 
+from dataclasses import replace
 from pathlib import Path
 from typing import Union
 
@@ -96,6 +97,19 @@ def preprocess(img: Image.Image, config: PipelineConfig) -> tuple[np.ndarray, np
     tw, th = config.target_width, config.target_height
 
     img = load_image(img)
+
+    if config.preserve_aspect_ratio:
+        sw, sh = img.size
+        if sw >= sh:
+            tw = config.max_dimension
+            th = max(1, round(tw * sh / sw))
+        else:
+            th = config.max_dimension
+            tw = max(1, round(th * sw / sh))
+        config = replace(config, target_width=tw, target_height=th)
+    else:
+        tw, th = config.target_width, config.target_height
+
     img = _center_crop_to_aspect(img, tw, th)
 
     rgb_layer = img.convert("RGB")

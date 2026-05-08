@@ -113,6 +113,8 @@ def generate_pattern(req: PatternRequest):
         max_colors=req.max_colors,
         remove_isolated_beads=req.remove_isolated,
         min_region_size=req.min_region_size,
+        preserve_aspect_ratio=req.preserve_aspect_ratio,
+        max_dimension=req.max_dimension,
     )
 
     try:
@@ -138,8 +140,8 @@ def generate_pattern(req: PatternRequest):
     ]
 
     return PatternResponse(
-        width=req.width,
-        height=req.height,
+        width=result.width,
+        height=result.height,
         pattern=pattern_2d,
         colors=colors,
         stats=StatsResponse(
