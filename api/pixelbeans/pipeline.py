@@ -276,12 +276,13 @@ def run_grid(
 # ---- assembly & full run -----------------------------------------------------
 
 def _assign_symbols(used_indices: list[int]) -> dict[int, str]:
-    if len(used_indices) > len(_SYMBOL_ALPHABET):
-        raise ValueError(
-            f"too many distinct colors ({len(used_indices)}) for symbol encoding; "
-            f"alphabet size is {len(_SYMBOL_ALPHABET)}"
-        )
-    return {pi: _SYMBOL_ALPHABET[k] for k, pi in enumerate(used_indices)}
+    symbol_map = {}
+    for k, pi in enumerate(used_indices):
+        if k < len(_SYMBOL_ALPHABET):
+            symbol_map[pi] = _SYMBOL_ALPHABET[k]
+        else:
+            symbol_map[pi] = ""  # Excess colors: no symbol assigned
+    return symbol_map
 
 
 def assemble(
